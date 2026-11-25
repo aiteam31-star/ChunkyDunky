@@ -390,11 +390,12 @@ function mount(html, view) {
 }
 
 function showHome() {
-  mount(heroHTML() + stripHTML() + categoriesHTML() + shopHTML() + (window.BNL_flex ? window.BNL_flex.html() : '') + sellersHTML() + AuctionSection() + freshHTML() + howHTML() + trustHTML(), 'home');
+  mount(heroHTML() + stripHTML() + (window.BNL_shoe ? window.BNL_shoe.html() : '') + categoriesHTML() + shopHTML() + (window.BNL_flex ? window.BNL_flex.html() : '') + sellersHTML() + AuctionSection() + freshHTML() + howHTML() + trustHTML(), 'home');
   syncFilters();
   renderGrid();
   initAuctionUI();
   if (window.BNL_flex) window.BNL_flex.init();
+  if (window.BNL_shoe) window.BNL_shoe.init();
   setNav('home');
   if (S.pendingScroll) {
     const id = S.pendingScroll; S.pendingScroll = null;
