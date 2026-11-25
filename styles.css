@@ -495,25 +495,6 @@ main:focus{outline:none}
 @keyframes toastIn{from{opacity:0;transform:translateY(24px) scale(.95)}to{opacity:1;transform:none}}
 @keyframes toastOut{to{opacity:0;transform:translateY(12px)}}
 
-/* ---------- 3D SNEAKER BACKGROUND (see bgshoe.js) */
-.bg-shoe{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
-.bg-shoe.off,.bg-shoe.failed{display:none}
-.bg-shoe.front{z-index:4}
-.bs-wrap{position:absolute;right:-6vw;top:50%;width:min(46vw,640px);height:min(46vw,640px);margin-top:calc(min(46vw,640px) / -2);opacity:0;transition:opacity 1.4s var(--ease);will-change:transform}
-.bg-shoe.ready .bs-wrap{opacity:.82}
-.bs-wrap model-viewer{width:100%;height:100%;background:transparent;--poster-color:transparent;--progress-bar-color:transparent;outline:none}
-.bs-toggle{position:fixed;left:14px;bottom:14px;z-index:45;display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;background:rgba(241,238,232,.86);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid var(--line);font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);transition:transform .3s var(--ease)}
-.bs-toggle:hover{transform:translateY(-2px)}
-.bs-toggle i{width:8px;height:8px;border-radius:50%;background:var(--grey)}
-.bs-toggle[aria-pressed="true"] i{background:#2f9e5b;box-shadow:0 0 0 3px rgba(47,158,91,.25)}
-/* let the sneaker show through the light sections; dark sections stay mostly solid */
-.shop,.sellers,.fresh,.trust,.flexwall{background:transparent}
-.auction{background:rgba(7,7,8,.9)}
-.how{background:rgba(11,11,11,.9)}
-.footer{background:rgba(28,28,30,.93)}
-@media (max-width:700px){.bg-shoe.ready .bs-wrap{opacity:.55}.bs-wrap{width:95vw;height:95vw;margin-top:-47vw;right:-28vw}.bs-toggle{bottom:10px;left:10px}}
-@media print{.bg-shoe,.bs-toggle{display:none}}
-
 /* ---------- THE FLEX WALL (see flexwall.js) */
 .btn-lime{background:var(--acid);color:var(--ink)}
 .btn-lime:hover{background:#e6ff7a;transform:translateY(-2px)}
@@ -847,8 +828,6 @@ main:focus{outline:none}
   .reveal{opacity:1;transform:none}
   .hero h1 .ln>span{transform:none}
 }
-
-
 
 
 
